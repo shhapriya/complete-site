@@ -66,7 +66,7 @@ nav a:hover, nav a:focus {
         animation: none;
         transition: none;
   }
-  #gif {
+  #gif1 {
     display: none;
 
   }
@@ -109,27 +109,14 @@ width: 50%; /* Make each image fill its container width */
 height: auto;
 display: block;
 border: 3px solid black; /* Initial thick solid black border */
+padding: 20px; 
+margin: 50px; 
 transition: border 0.3s ease; /* Add transition for a smooth effect */
 }
 img:hover {
   border-style: dashed; /* Change border style to dashed on hover */
   border:#5a97ac; 
 }
-
-/* .recipes img {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.recipes img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; 
-}
-.recipes img:hover{
-    transform: scale(1.2); 
-} */
 
 li {
 display: inline-block;
@@ -146,15 +133,21 @@ grid-template-columns: 2fr 2fr 2fr;
 text-align: left;
 }
 
-@keyframes fade-in {
-    0% {
-    opacity: 0;
-    }
-    100% {
-    opacity: 0.5;
-    }
-    }
+@keyframes move {
+  from {width: 25%;}
+  to {width: 45%;}
+}
 
+.img {
+  width: 45%;
+  display: block;
+  border: 3px solid black;
+  border-radius: 8px; 
+  margin-top: 20px;
+  margin: auto; 
+  animation-duration: 2s; 
+  animation-name: move;/* Apply the animation */
+}
 
 
     @media screen and (min-width:768px) {
@@ -190,8 +183,6 @@ text-align: left;
     cursor: pointer;
   }
   
-
-  
   .toggle-label::before {
     content: '';
     position: absolute;
@@ -218,18 +209,20 @@ text-align: left;
     background-color: #564eb2; /* Set your desired dark mode background color */
     color: #fff; /* Set your desired dark mode text color */
 }
-
-
-        .Pets {
+        .pet-pics {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Two columns with equal width */
+        grid-template-columns: 3fr 1fr 1fr; /* Two columns with equal width */
         grid-gap: 20px; /* Gap between images */
               }
-
-        
-        .recipes-pics img {
+          .travel-pics {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr); /* Two columns with equal width */
+              gap: 20px;
+              padding: 20px;
+            }
+        .recipes-pics {
          display: grid;
-           grid-template-columns: 1fr 1fr 1fr 1fr; 
+           grid-template-columns: repeat (4, 1fr); 
            width: 100%;
            margin: auto;
            } 
@@ -298,14 +291,22 @@ text-align: left;
     }
 
     @media screen and (min-width:800px)  {
-    .travel-pics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-     
-   /* .travel-pics .HotSprings {
+    .favorites-button {
+      padding: 5px;
+      background-color: rgb(95, 19, 99);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width: 1000px; 
+      border-radius: 2px;
+      text-align: center; 
+      margin: 0 auto; /* Center the button horizontally */
+    }
 
-   } */
-
+    .text-under-button {
+      margin-top: 10px;
+      font-weight: bold;
+      margin: 0 auto; /* Center the button horizontally */
     }
   
     .box {
@@ -397,19 +398,5 @@ text-align: left;
 
   body {
     font-family: Arial, sans-serif;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-
 }
     }
